@@ -418,3 +418,43 @@ var testData={
         {city:'Ясиноватая',lat:48.1277778,lng:37.8625,count:10}]
 
 };
+
+// here is example visualized path to foreing country with milestones to achieve
+var russiaRiskPathCoordinates = [
+	new google.maps.LatLng(51.0380556, 31.8861111),
+	new google.maps.LatLng(51.2409432, 33.2050521),
+	new google.maps.LatLng(51.8666667, 33.4833333),					
+	new google.maps.LatLng(53.21667, 34.41667),
+	new google.maps.LatLng(54.58333, 36.16667),
+	new google.maps.LatLng(55.75, 37.58333)
+];
+
+var russiaSteps = ['<div id="content">'+
+				  '<div id="siteNotice">'+
+				  '</div>'+
+				  '<h4 id="firstHeading" class="firstHeading">Шаг 1. Законодательство России</h4>'+
+				  '<div id="bodyContent">'+
+				  '<p>Какие документы необходимы для легальной работы на территории России?</p>'+
+				  '<ul><li><a href="#">Все о миграционных картах.</a></li>'+
+				  '<li><a href="#">Правила оформления разрешения на работу в России.</a></li>'+
+				  '<li><a href="#">Сколько на самом деле можно находиться без регистрации в Москве?.</a></li></ul>'+
+				  '</div>'+
+				  '</div>', '<div id="content">'+
+				  '<div id="siteNotice">'+
+				  '</div>'+
+				  '<h4 id="firstHeading" class="firstHeading">Шаг 2. Знание языка</h4>'+
+				  '<div id="bodyContent">'+
+				  '<p>Вы хорошо говорите по русски?</p>'+
+				  '</div>'+
+				  '</div>', '<div id="content">'+
+				  '<div id="siteNotice">'+
+				  '</div>'+
+				  '<h4 id="firstHeading" class="firstHeading">Шаг 3. Проверка работодателя или посредника</h4>'+
+				  '<div id="bodyContent">'+
+				  '<p>Вопросы, которые необходтмо задать работодателю</p>'+
+				  '<ul><li>Готов ли ваш работодатель оформлять для вас право на работу?</li>'+
+				  '<li>Будут ли вам платить официальную зарплату или в конверте?</li>'+
+				  '<li>Сколько людей, которых вы знаете лично поехало успешно работать через вашего работодателя или посредника?</li></ul>'+
+				  '</div>'+
+				  '</div>'];	
+				  
