@@ -4,10 +4,26 @@
    Author's custom styles
    ========================================================================== */
 
+.map{
+	height:auto;
+	border-width:1px;
+	border-color:#333;
+	border-style:dotted;
+	position:absolute;
+	margin-top:0%;
+	width:100%;
+}
 
 
+.bottom-info{
+	height:20%;
+	margin-top:40%;
 
-
+}
+.top-info{
+	height:10%;
+	margin-top:0%;
+}
 
 
 
