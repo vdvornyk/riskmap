@@ -2116,7 +2116,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #eb8210;
-  border-color: #357ebd;
+  border-color: #eb5110;
 }
 
 .btn-warning {
@@ -4490,7 +4490,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #433f3c;
   border-color: #080808;
 }
 

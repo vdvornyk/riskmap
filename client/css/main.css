@@ -5,10 +5,9 @@
    ========================================================================== */
 
 .map{
+	margin-left:23%;
 	height:auto;
-	border-width:1px;
-	border-color:#333;
-	border-style:dotted;
+	
 	position:absolute;
 	margin-top:0%;
 	width:100%;
@@ -22,10 +21,35 @@
 }
 .top-info{
 	height:10%;
-	margin-top:0%;
+	margin-top:30px;
 }
 
 
+.btn-custom {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #F04613;
+	*background-color: #F04613;
+	background-image: -moz-linear-gradient(top, #E31B09, #F04613);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E31B09), to(#F04613));
+	background-image: -webkit-linear-gradient(top, #E31B09, #F04613);
+	background-image: -o-linear-gradient(top, #E31B09, #F04613);
+	background-image: linear-gradient(to bottom, #E31B09, #F04613);
+	background-repeat: repeat-x;
+	border-color: #F04613;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E31B09', endColorstr='#F04613', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.disabled,
+.btn-custom[disabled] {
+	color: #FFFFFF;
+	background-color: #F04613;
+	*background-color: #003bb3;
+}
 
 
 
