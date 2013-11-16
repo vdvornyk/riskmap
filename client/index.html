@@ -145,10 +145,15 @@
 				for(var i=0; i<russiaSteps.length; i++){
 					var window = windows[i];
 					var marker = markers[i];
-					google.maps.event.addListener(marker, 'click', function() {
-						console.log(window.content);
-						window.open(map, marker);
-					});	
+					console.log(windows[i].content);
+					
+					(function (_td, _marker, _window) {
+						_td.addListener(_marker, 'click', function(){
+							console.log(_window.content);
+							_window.open(map, _marker);
+						});
+					})(google.maps.event, marker, window);
+					
 				}			
 		
 				
