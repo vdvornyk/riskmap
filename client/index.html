@@ -119,13 +119,49 @@
                 };
                 map = new google.maps.Map(document.getElementById("heatmapArea"), myOptions);
 
-                heatmap = new HeatmapOverlay(map, {"radius": 25, "visible": true, "opacity": 60});
+				// attempt to build risk path to Russia
+				var riskPath = new google.maps.Polyline({
+					path: russiaRiskPathCoordinates,
+					geodesic: true,
+					strokeColor: '#FF0000',
+					strokeOpacity: 1.0,
+					strokeWeight: 3
+				});
+
+				var windows = new Array()
+				var markers = new Array()
+				for(var i=0; i<russiaSteps.length; i++){
+					var window = new google.maps.InfoWindow({
+						content: russiaSteps[i]
+					});
+					windows.push(window);
+					var marker = new google.maps.Marker({
+						position: russiaRiskPathCoordinates[i],
+						map: map,
+						title: 't'
+					});		
+					markers.push(marker);
+				}	
+				for(var i=0; i<russiaSteps.length; i++){
+					var window = windows[i];
+					var marker = markers[i];
+					google.maps.event.addListener(marker, 'click', function() {
+						console.log(window.content);
+						window.open(map, marker);
+					});	
+				}			
+		
+				
+				riskPath.setMap(map);
 
 
-                // this is important, because if you set the data set too early, the latlng/pixel projection doesn't work
-                google.maps.event.addListenerOnce(map, "idle", function () {
-                    heatmap.setDataSet(testData);
-                });
+				heatmap = new HeatmapOverlay(map, {"radius": 25, "visible": true, "opacity": 60});
+
+
+				// this is important, because if you set the data set too early, the latlng/pixel projection doesn't work
+				google.maps.event.addListenerOnce(map, "idle", function () {
+					heatmap.setDataSet(testData);
+				});
 
             };
 
