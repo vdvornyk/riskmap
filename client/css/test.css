@@ -1,5 +1,5 @@
 .test{
-	text-align:center;
+	
 	position:absolute;
 	background-color:#dddddd;
 	height:87%;
@@ -13,6 +13,11 @@ width:100%;
 height:30px;
 }
 .btn-group{
+	margin-left:40%;
 	position:absolute;
-
+padding-bottom: 20px;
+}
+.btn-lg{
+	position:absolute;
+	margin-left:33%;
 }
