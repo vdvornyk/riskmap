@@ -21,11 +21,21 @@ $(".toCountry").on("click", function(){
 $(".toLanguage").on("click", function(){
 	$('#languageModal').modal({
 	  keyboard: false
-	})
+	});
+	
+	$("#languageModal").stop().delay(5000).fadeIn(1000,
+		function(){
+			console.log("You are stolen!");
+			$('#stolenModal').modal({
+			  keyboard: false
+			});
+		});
+	console.log("started timer");
 });
 
 
 $(".toEducational").on("click", function(){
+	$("#languageModal").stop();
 	$('#educationalModal').modal({
 	  keyboard: false
 	})
