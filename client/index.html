@@ -377,6 +377,122 @@
 <script src="js/vendor/heatmap-gmaps.js"></script>
 <script src="js/app.js"></script>
 
+    var map;
+    var heatmap;
+
+    var buildPath;
+
+    window.onload = function () {
+        var myLatlng = new google.maps.LatLng(50.4501, 30.5234);
+        // sorry - this demo is a beta
+        // there is lots of work todo
+        // but I don't have enough time for eg redrawing on dragrelease right now
+        var myOptions = {
+            zoom: 5,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            draggable: true,
+            navigationControl: true,
+            mapTypeControl: false,
+            scaleControl: true,
+            disableDoubleClickZoom: false
+        };
+        map = new google.maps.Map(document.getElementById("heatmapArea"), myOptions);
+
+        buildPath = function () {
+            // attempt to build risk path to Russia
+            var riskPath = new google.maps.Polyline({
+                path: russiaRiskPathCoordinates,
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+
+            var windows = new Array()
+            var markers = new Array()
+            for (var i = 0; i < russiaSteps.length; i++) {
+                var window = new google.maps.InfoWindow({
+                    content: russiaSteps[i]
+                });
+                windows.push(window);
+                var marker = new google.maps.Marker({
+                    position: russiaRiskPathCoordinates[2 * i + 1],
+                    map: map,
+                    title: 't',
+                    icon: 'img/warning.png'
+                });
+                markers.push(marker);
+            }
+            for (var i = 0; i < russiaSteps.length; i++) {
+                var window = windows[i];
+                var marker = markers[i];
+                console.log(windows[i].content);
+
+                (function (_td, _marker, _window) {
+                    _td.addListener(_marker, 'click', function () {
+                        console.log(_window.content);
+                        _window.open(map, _marker);
+                    });
+                })(google.maps.event, marker, window);
+
+            }
+
+            riskPath.setMap(map);
+        };
+
+        var manControlDiv = document.createElement('div');
+        var manControl = new GenderControl(manControlDiv, map);
+
+        manControlDiv.index = 1;
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(manControlDiv);
+
+        var ageControlDiv = document.createElement('div');
+        var ageControl = new AgeControl(ageControlDiv, map);
+
+        ageControlDiv.index = 1;
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ageControlDiv);
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(
+                document.getElementById('legend'));
+
+
+        heatmap = new HeatmapOverlay(map, {"radius": 25, "visible": true, "opacity": 60});
+
+
+        // this is important, because if you set the data set too early, the latlng/pixel projection doesn't work
+        google.maps.event.addListenerOnce(map, "idle", function () {
+            heatmap.setDataSet(testData);
+        });
+
+    };
+
+</script>
+
+<!--div class="bottom-info">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <h2>Простий тест</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+      </div>
+      <hr>
+</div-->
 <footer>
     <p>&copy; Company 2013</p>
 </footer>
