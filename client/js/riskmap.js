@@ -456,5 +456,59 @@ var russiaSteps = ['<div id="content">'+
 				  '<li>Будут ли вам платить официальную зарплату или в конверте?</li>'+
 				  '<li>Сколько людей, которых вы знаете лично поехало успешно работать через вашего работодателя или посредника?</li></ul>'+
 				  '</div>'+
-				  '</div>'];	
+				  '</div>'];
+
+function GenderControl(title, controlDiv, map) {
+
+	// Set CSS styles for the DIV containing the control
+	// Setting padding to 5 px will offset the control
+	// from the edge of the map
+	controlDiv.style.padding = '5px';
+
+	// Set CSS for the control border
+	var controlUI_man = document.createElement('div');
+	controlUI_man.style.backgroundColor = 'white';
+	controlUI_man.style.borderStyle = 'solid';
+	controlUI_man.style.borderWidth = '2px';
+	controlUI_man.style.cursor = 'pointer';
+	controlUI_man.style.textAlign = 'center';
+	controlUI_man.title = 'Click to filter';
+	controlDiv.appendChild(controlUI_man);
+
+	// Set CSS for the control interior
+	var controlText = document.createElement('div');
+	controlText.style.fontFamily = 'Arial,sans-serif';
+	controlText.style.fontSize = '12px';
+	controlText.style.paddingLeft = '4px';
+	controlText.style.paddingRight = '4px';
+	controlText.innerHTML = '<b>чоловіки</b>';
+	controlUI_man.appendChild(controlText);
+
+	var hr = document.createElement('hr');
+	hr.style.marginTop = '0px';
+	hr.style.marginBottom = '0px';
+	controlUI_man.appendChild(hr);
+
+	// Set CSS for the control interior
+	var controlText2 = document.createElement('div');
+	controlText2.style.fontFamily = 'Arial,sans-serif';
+	controlText2.style.fontSize = '12px';
+	controlText2.style.paddingLeft = '4px';
+	controlText2.style.paddingRight = '4px';
+	controlText2.innerHTML = '<b>жінки</b>';
+	controlUI_man.appendChild(controlText2);
+
+	// Setup the click event listeners: filter on man
+	google.maps.event.addDomListener(controlText, 'click', function() {
+	console.log("change dataset");
+	heatmap.setDataSet(testData);
+	});
+
+	// Setup the click event listeners: filter on man
+	google.maps.event.addDomListener(controlText2, 'click', function() {
+	console.log("change dataset");
+	heatmap.setDataSet(testData);
+	});
+
+}				  
 				  

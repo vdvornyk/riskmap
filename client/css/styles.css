@@ -52,5 +52,6 @@ h2{
     margin-top:0;
 }
 
+#map { width: 100% }
 .carousel .carousel-control { visibility: hidden; }
 .carousel:hover .carousel-control { visibility: hidden; }

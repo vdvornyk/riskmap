@@ -157,7 +157,13 @@
 						});
 					})(google.maps.event, marker, window);
 					
-				}			
+				}					
+				
+				var manControlDiv = document.createElement('div');
+				var manControl = new GenderControl('чоловіки', manControlDiv, map);			
+				
+				manControlDiv.index = 1;
+				map.controls[google.maps.ControlPosition.TOP_RIGHT].push(manControlDiv);						
 		
 				
 				riskPath.setMap(map);
