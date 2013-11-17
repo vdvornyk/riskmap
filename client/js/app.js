@@ -116,7 +116,8 @@ for (var i = 0; i < russiaSteps.length; i++) {
         var marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
-            title: 'Посольство Украины в Москве'
+            title: 'Посольство Украины в Москве',
+            icon: 'https://cdn1.iconfinder.com/data/icons/PLASTICXP/medical/png/24/emergency.png'
         });
         google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map,marker);
