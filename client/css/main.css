@@ -4,6 +4,12 @@
    Author's custom styles
    ========================================================================== */
 
+.btn-group-horizontal{
+	text-align:center;
+
+}
+
+
 .map{
 	margin-left:15%;
 	height:auto;

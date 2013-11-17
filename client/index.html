@@ -43,7 +43,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="test.html">Тест ризику</a></li>
+            <li><a href="#" class="test-headbar">Тест ризику
+			</a></li>
             <li><a href="file:///home/lut/riskmap/client/about.html">Про проект</a></li>
             <li><a href="file:///home/lut/riskmap/client/contact.html">Зв'язок</a></li>
             <!--li class="dropdown">
@@ -162,12 +163,12 @@
 			  </div>
 			  <div class="modal-body">
 				<div class="btn-group-vertical">
-				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Російська Федерація</button>
-				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Польща</button>
-				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Чеська Республіка</button>
-				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Туреччина</button>
-				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Італія</button>
-				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Інші країни</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal" id="country">Російська Федерація</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal" id="country">Польща</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal" id="country">Чеська Республіка</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal" id="country">Туреччина</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal" id="country">Італія</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal" >Інші країни</button>
 				</div>		
 			  </div>
 			  <div class="modal-footer">
@@ -211,11 +212,15 @@
 				<h4 class="modal-title" id="myModalLabel">Який рівень вашої освіти?</h4>
 			  </div>
 			  <div class="modal-body">
-				<button type="button" class="btn btn-default toResults" data-dismiss="modal">Початкова середня</button>
+				
+				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Початкова середня</button>
 				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Середня</button>
 				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Неповна вища</button>
 				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Повна вища</button>
+				
 			  </div>
+			  
+			
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>
 				<button type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
@@ -237,7 +242,7 @@
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">Чому?</button>
-				<button type="button" class="btn btn-primary buildPath" data-dismiss="modal">Як це виправити?</button>
+				<button type="button" class="btn btn-warning buildPath" data-dismiss="modal">Як це виправити?</button>
 			  </div>
 			</div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->

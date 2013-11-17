@@ -4,6 +4,12 @@ $(".toAge").on("click", function(){
 	  keyboard: false
 	})
 });
+$(".test-headbar").on("click", function(){
+	console.log("go to age modal");
+	$('#genderModal').modal({
+	  keyboard: false
+	})
+});
 
 $(".toExperience").on("click", function(){
 	$('#experienceModal').modal({
