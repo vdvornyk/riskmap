@@ -17,17 +17,18 @@ $(".toCountry").on("click", function(){
 	})
 });
 
-
 $(".toLanguage").on("click", function(){
 	$('#languageModal').modal({
 	  keyboard: false
 	});
-	
-	$("#languageModal").stop().delay(5000).fadeIn(1000,
-		function(){
-			console.log("You are stolen!");
-			$('#stolenModal').modal({
-			  keyboard: false
+	stolen = true;
+	$("#languageModal").doTimeout("stolen", 5000, function(){
+		$("#languageModal").fadeIn(1000,
+			function(){
+				console.log("You are stolen!");
+				$('#stolenModal').modal({
+				  keyboard: false
+				});
 			});
 		});
 	console.log("started timer");
@@ -35,7 +36,7 @@ $(".toLanguage").on("click", function(){
 
 
 $(".toEducational").on("click", function(){
-	$("#languageModal").stop();
+	$("#languageModal").doTimeout("stolen");
 	$('#educationalModal').modal({
 	  keyboard: false
 	})
@@ -46,6 +47,11 @@ $(".toResults").on("click", function(){
 	$('#resultsModal').modal({
 	  keyboard: false
 	})
+});
+
+$(".buildPath").on("click", function(){
+	console.log("Building predefined path for Russia");
+	buildPath();
 });
 
 

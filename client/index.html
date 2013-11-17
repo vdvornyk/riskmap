@@ -240,8 +240,8 @@
 				<img src="img/stop.png" width="270"/>		
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Чому?</button>
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Як це виправити?</button>
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">Чому?</button>
+				<button type="button" class="btn btn-primary buildPath" data-dismiss="modal">Як це виправити?</button>
 			  </div>
 			</div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -303,42 +303,46 @@
                 };
                 map = new google.maps.Map(document.getElementById("heatmapArea"), myOptions);
 
-				// attempt to build risk path to Russia
-				var riskPath = new google.maps.Polyline({
-					path: russiaRiskPathCoordinates,
-					geodesic: true,
-					strokeColor: '#FF0000',
-					strokeOpacity: 1.0,
-					strokeWeight: 3
-				});
-
-				var windows = new Array()
-				var markers = new Array()
-				for(var i=0; i<russiaSteps.length; i++){
-					var window = new google.maps.InfoWindow({
-						content: russiaSteps[i]
+				var buildPath = function(){
+					// attempt to build risk path to Russia
+					var riskPath = new google.maps.Polyline({
+						path: russiaRiskPathCoordinates,
+						geodesic: true,
+						strokeColor: '#FF0000',
+						strokeOpacity: 1.0,
+						strokeWeight: 3
 					});
-					windows.push(window);
-					var marker = new google.maps.Marker({
-						position: russiaRiskPathCoordinates[i],
-						map: map,
-						title: 't'
-					});		
-					markers.push(marker);
-				}	
-				for(var i=0; i<russiaSteps.length; i++){
-					var window = windows[i];
-					var marker = markers[i];
-					console.log(windows[i].content);
-					
-					(function (_td, _marker, _window) {
-						_td.addListener(_marker, 'click', function(){
-							console.log(_window.content);
-							_window.open(map, _marker);
+				
+					var windows = new Array()
+					var markers = new Array()
+					for(var i=0; i<russiaSteps.length; i++){
+						var window = new google.maps.InfoWindow({
+							content: russiaSteps[i]
 						});
-					})(google.maps.event, marker, window);
-					
-				}					
+						windows.push(window);
+						var marker = new google.maps.Marker({
+							position: russiaRiskPathCoordinates[i],
+							map: map,
+							title: 't'
+						});		
+						markers.push(marker);
+					}	
+					for(var i=0; i<russiaSteps.length; i++){
+						var window = windows[i];
+						var marker = markers[i];
+						console.log(windows[i].content);
+						
+						(function (_td, _marker, _window) {
+							_td.addListener(_marker, 'click', function(){
+								console.log(_window.content);
+								_window.open(map, _marker);
+							});
+						})(google.maps.event, marker, window);
+						
+					}	
+
+					riskPath.setMap(map);		
+				};				
 				
 				var manControlDiv = document.createElement('div');
 				var manControl = new GenderControl(manControlDiv, map);			
@@ -355,7 +359,7 @@
 				map.controls[google.maps.ControlPosition.TOP_LEFT].push(
 				document.getElementById('legend'));
 				
-				riskPath.setMap(map);
+				
 
 
 				heatmap = new HeatmapOverlay(map, {"radius": 25, "visible": true, "opacity": 60});
@@ -403,6 +407,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.ba-dotimeout.js"></script>
 
         <script src="js/main.js"></script>
         <script src="js/test.js"></script>
