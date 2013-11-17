@@ -64,6 +64,3 @@ h2{
 	border-width: 2px;
 	cursor: pointer;
 }
-#content, #firstHeading, #bodyContent{
-	display: block;
-}
