@@ -99,7 +99,7 @@
 				</div>	
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>
 			  </div>
 			</div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -122,7 +122,7 @@
 				</div>	
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>
 				<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -145,7 +145,7 @@
 				
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>
 				<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -171,7 +171,7 @@
 				</div>		
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>
 				<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -195,7 +195,7 @@
 				</div>			
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>			
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>			
 				<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -217,7 +217,7 @@
 				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Повна вища</button>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти</button>
 				<button type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
 			  </div>
 			</div><!-- /.modal-content -->
@@ -319,9 +319,10 @@
 						});
 						windows.push(window);
 						var marker = new google.maps.Marker({
-							position: russiaRiskPathCoordinates[i],
+							position: russiaRiskPathCoordinates[2*i+1],
 							map: map,
-							title: 't'
+							title: 't',
+							icon: 'img/warning.png'
 						});		
 						markers.push(marker);
 					}	
