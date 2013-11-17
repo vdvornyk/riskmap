@@ -15,7 +15,7 @@ h1 {
 #heatmapArea {
     position:relative;
     float:left;
-    width:800px;
+    width:100%;
     height:600px;
     border:1px dashed black;
 }
