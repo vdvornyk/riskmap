@@ -283,6 +283,8 @@
 
             var map;
             var heatmap;
+			
+			var buildPath;
 
             window.onload = function () {
                 var myLatlng = new google.maps.LatLng(50.4501, 30.5234);
@@ -303,7 +305,7 @@
                 };
                 map = new google.maps.Map(document.getElementById("heatmapArea"), myOptions);
 
-				var buildPath = function(){
+				buildPath = function(){
 					// attempt to build risk path to Russia
 					var riskPath = new google.maps.Polyline({
 						path: russiaRiskPathCoordinates,
