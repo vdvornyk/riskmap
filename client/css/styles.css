@@ -67,3 +67,10 @@ h2{
 #content, #firstHeading, #bodyContent{
 	display: block;
 }
+#map-canvas div{
+    line-height:1.35;
+    overflow:hidden !important;
+    white-space:nowrap;
+    height: 100%;
+
+}
