@@ -453,10 +453,10 @@ var russiaRiskPathCoordinates = [
 var russiaSteps = ['<div id="content">'+
 				  '<div id="siteNotice">'+
 				  '</div>'+
-				  '<h4 id="firstHeading" class="firstHeading">Крок 1. Законодавство Россії</h4>'+
+				  '<h4 id="firstHeading" class="firstHeading">Крок 1. Законодавство Росії</h4>'+
 				  '<div id="bodyContent">'+
 				  '<p>Які документи необхідно мати для легального працевлаштування на території Росії?</p>'+
-				  '<ul><li><a href="#">Все при міграційні карти.</a></li>'+
+				  '<ul><li><a href="#">Все про міграційні карти.</a></li>'+
 				  '<li><a href="#">Правила оформлення дозволу на роботу в Росії.</a></li>'+
 				  '<li><a href="#">ССкільки насправді можна пеербувати без реєстрації у Москві?.</a></li></ul>'+
 				  '</div>'+
