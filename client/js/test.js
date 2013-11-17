@@ -1,17 +1,17 @@
-$("#toAge").on("click", function(){
+$(".toAge").on("click", function(){
 	console.log("go to age modal");
 	$('#ageModal').modal({
 	  keyboard: false
 	})
 });
 
-$("#toExperience").on("click", function(){
+$(".toExperience").on("click", function(){
 	$('#experienceModal').modal({
 	  keyboard: false
 	})
 });
 
-$("#toCountry").on("click", function(){
+$(".toCountry").on("click", function(){
 	$('#countryModal').modal({
 	  keyboard: false
 	})
