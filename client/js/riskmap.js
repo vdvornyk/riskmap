@@ -431,12 +431,14 @@ var testDataWoman = {
 
 for(var i=0; i<= testData.data.length; i++){
 	var dt = testData.data[i];
-	console.log(dt);
+	//console.log(dt);
 	if(dt != undefined){
 		testDataMan.data.push({city: dt.city, lat: dt.lat, lng: dt.lng, count: dt.count*0.6});
 		testDataWoman.data.push({city: dt.city, lat: dt.lat, lng: dt.lng, count: dt.count*0.8});
 	}
 }
+
+console.log("data loaded");
 
 // here is example visualized path to foreing country with milestones to achieve
 var russiaRiskPathCoordinates = [
@@ -551,7 +553,6 @@ function GenderControl(controlDiv, map) {
 			controlText.style.backgroundColor = '#fff';
 		}
 	});
-
 }		
 
 
@@ -589,9 +590,7 @@ function AgeControl(controlDiv, map) {
 			hr.style.marginTop = '0px';
 			hr.style.marginBottom = '0px';
 			controlUI.appendChild(hr);
-		}
-
-		
+		}		
 	}
 
 	// Setup the click event listeners: filter on man
@@ -599,8 +598,51 @@ function AgeControl(controlDiv, map) {
 		console.log("change dataset for age");
 		heatmap.setDataSet(testData);
 	});
+}				  
 
 
+function AdviceControl(controlDiv, map) {
+
+	var groups = ["до 18", "18-24", "25-39", "більше 40"];
+	
+	// Set CSS styles for the DIV containing the control
+	// Setting padding to 5 px will offset the control
+	// from the edge of the map
+	controlDiv.style.padding = '5px';
+
+	// Set CSS for the control border
+	var controlUI = document.createElement('div');
+	controlUI.style.backgroundColor = 'white';
+	controlUI.style.borderStyle = 'solid';
+	controlUI.style.borderWidth = '2px';
+	controlUI.style.cursor = 'pointer';
+	controlUI.style.textAlign = 'center';
+	controlUI.title = 'Click to filter';
+	controlDiv.appendChild(controlUI);
+
+	for(var i=0; i< groups.length; i++){
+		// Set CSS for the control interior
+		var controlText = document.createElement('div');
+		controlText.style.fontFamily = 'Arial,sans-serif';
+		controlText.style.fontSize = '12px';
+		controlText.style.paddingLeft = '4px';
+		controlText.style.paddingRight = '4px';
+		controlText.innerHTML = '<b>' + groups[i] + '</b>';
+		controlUI.appendChild(controlText);
+		
+		if(i<groups.length-1){
+			var hr = document.createElement('hr');
+			hr.style.marginTop = '0px';
+			hr.style.marginBottom = '0px';
+			controlUI.appendChild(hr);
+		}		
+	}
+
+	// Setup the click event listeners: filter on man
+	google.maps.event.addDomListener(controlUI, 'click', function() {
+		console.log("change dataset for age");
+		heatmap.setDataSet(testData);
+	});
 }				  
 					  
 				  

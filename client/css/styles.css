@@ -55,3 +55,12 @@ h2{
 #map { width: 100% }
 .carousel .carousel-control { visibility: hidden; }
 .carousel:hover .carousel-control { visibility: hidden; }
+
+#legend{
+	background-color: white;
+	padding: 25px;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 2px;
+	cursor: pointer;
+}

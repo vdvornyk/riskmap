@@ -80,9 +80,206 @@
         <h1>Вирушаєш закордон?</h1>
         <p>Отримай потрібну інформацію та забезпеч себе від можливості потрапити в рабство. Не стань наступним!</p>
 
-        <p><a class="btn btn-warning btn-lg" href="test.html">Оціни рівень свого ризику! &raquo;</a></p>
+        <!--p><a class="btn btn-warning btn-lg" href="test.html">Оціни рівень свого ризику! &raquo;</a></p-->
+		
+		<p>
+			<button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#genderModal">
+			  Оціни рівень свого ризику!
+			</button>
+		</p>
+		
+		<!-- Gender -->
+		<div class="modal fade" id="genderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Ваша стать</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="radio">
+				  <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Чоловік</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Жінка</label>
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button id="toAge" type="button" class="btn btn-primary" data-dismiss="modal">Наступне питання</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Age -->
+		<div class="modal fade" id="ageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Ваш вік</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="radio">
+				  <label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					до 16 років
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					18-24
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					25-39
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					більше 40 років
+				  </label>
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button id="toResults" type="button" class="btn btn-warning" data-dismiss="modal">Рівень мого ризику</button>
+				<button id="toExperience" type="button" class="btn btn-primary" data-dismiss="modal">Наступне питання</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
-
+		<!-- Experience -->
+		<div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Чи є у вас досвід роботи за кордоном?</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="radio">
+				  <label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					Так
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+					Ні
+				  </label>
+				</div>
+				
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button id="toResults" type="button" class="btn btn-warning" data-dismiss="modal">Рівень мого ризику</button>
+				<button id="toCountry" type="button" class="btn btn-primary" data-dismiss="modal">Наступне питання</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Country -->
+		<div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">До якої краіни плануєте поїхати на роботу?</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="btn-group-vertical">
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Російська Федерація</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Польща</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Чеська Республіка</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Туреччина</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Італія</button>
+				  <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Інші країни</button>
+				</div>		
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button id="toResults" type="button" class="btn btn-warning" data-dismiss="modal">Рівень мого ризику</button>
+				<button id="toLanguage" type="button" class="btn btn-primary toLanguage" data-dismiss="modal">Наступне питання</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Language -->
+		<div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Чи володієте іноземними мовами?</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="btn-group-vertical">
+				  <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так (2 і більше)</button>
+				  <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так (іноземна мова країни, куди я їду)</button>
+				  <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так (іноземна мова, крім країни, куди я їду)</button>
+				  <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Ні</button>
+				</div>			
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>			
+				<button id="toResults" type="button" class="btn btn-warning" data-dismiss="modal">Рівень мого ризику</button>
+				<button type="button" class="btn btn-primary toEducational" data-dismiss="modal">Наступне питання</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Educational -->
+		<div class="modal fade" id="educationalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Який рівень вашої освіти?</h4>
+			  </div>
+			  <div class="modal-body">
+				<button type="button" class="btn btn-default toResults" data-dismiss="modal">Початкова середня</button>
+				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Середня</button>
+				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Неповна вища</button>
+				  <button type="button" class="btn btn-default toResults" data-dismiss="modal">Повна вища</button>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">До карти</button>
+				<button type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого ризику</button>
+				<button type="button" class="btn btn-primary toResults" data-dismiss="modal">Отримати рівень мого ризику</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Results -->
+		<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Ваш рівень ризику - <b>червоний!</b></h4>
+			  </div>
+			  <div class="modal-body">
+				<img src="img/stop.png" width="300"/>		
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Чому?</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Як це виправити?</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
        
       </div>
     </div>
@@ -90,12 +287,12 @@
     <div class="map">
         <div class="container">
           
-          <h2>Карта ризику потрапляння в рабство</h2>
+          <!--h2>Карта ризику потрапляння в рабство</h2-->
             <div id="heatmapArea"></div>
        
         </div>
      </div>
-
+		
         <script src="js/vendor/heatmap.js"></script>
         <script src="js/vendor/heatmap-gmaps.js"></script>
         <script type="text/javascript">
@@ -112,7 +309,7 @@
                     zoom: 5,
                     center: myLatlng,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    disableDefaultUI: false,
+                    disableDefaultUI: true,
                     scrollwheel: true,
                     draggable: true,
                     navigationControl: true,
@@ -171,6 +368,8 @@
 				ageControlDiv.index = 1;
 				map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ageControlDiv);				
 		
+				map.controls[google.maps.ControlPosition.TOP_LEFT].push(
+				document.getElementById('legend'));
 				
 				riskPath.setMap(map);
 
@@ -213,12 +412,17 @@
       <footer>
         <p>&copy; Company 2013</p>
       </footer>
+	  
+	<div id="legend">
+		Карта ризику потрапляння в рабство
+	</div>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/main.js"></script>
+        <script src="js/test.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
