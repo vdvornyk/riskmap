@@ -109,7 +109,7 @@
                 // there is lots of work todo
                 // but I don't have enough time for eg redrawing on dragrelease right now
                 var myOptions = {
-                    zoom: 4,
+                    zoom: 5,
                     center: myLatlng,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     disableDefaultUI: false,
@@ -160,10 +160,16 @@
 				}					
 				
 				var manControlDiv = document.createElement('div');
-				var manControl = new GenderControl('чоловіки', manControlDiv, map);			
+				var manControl = new GenderControl(manControlDiv, map);			
 				
 				manControlDiv.index = 1;
-				map.controls[google.maps.ControlPosition.TOP_RIGHT].push(manControlDiv);						
+				map.controls[google.maps.ControlPosition.TOP_RIGHT].push(manControlDiv);	
+
+				var ageControlDiv = document.createElement('div');
+				var ageControl = new AgeControl(ageControlDiv, map);			
+				
+				ageControlDiv.index = 1;
+				map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ageControlDiv);				
 		
 				
 				riskPath.setMap(map);

@@ -419,6 +419,25 @@ var testData={
 
 };
 
+var testDataMan = {
+    max: 70,
+    data: []
+};
+
+var testDataWoman = {
+    max: 70,
+    data: []
+};
+
+for(var i=0; i<= testData.data.length; i++){
+	var dt = testData.data[i];
+	console.log(dt);
+	if(dt != undefined){
+		testDataMan.data.push({city: dt.city, lat: dt.lat, lng: dt.lng, count: dt.count*0.6});
+		testDataWoman.data.push({city: dt.city, lat: dt.lat, lng: dt.lng, count: dt.count*0.8});
+	}
+}
+
 // here is example visualized path to foreing country with milestones to achieve
 var russiaRiskPathCoordinates = [
 	new google.maps.LatLng(51.0380556, 31.8861111),
@@ -458,7 +477,8 @@ var russiaSteps = ['<div id="content">'+
 				  '</div>'+
 				  '</div>'];
 
-function GenderControl(title, controlDiv, map) {
+var isGeneric = true;
+function GenderControl(controlDiv, map) {
 
 	// Set CSS styles for the DIV containing the control
 	// Setting padding to 5 px will offset the control
@@ -497,18 +517,90 @@ function GenderControl(title, controlDiv, map) {
 	controlText2.style.paddingRight = '4px';
 	controlText2.innerHTML = '<b>жінки</b>';
 	controlUI_man.appendChild(controlText2);
+	
+	
 
 	// Setup the click event listeners: filter on man
 	google.maps.event.addDomListener(controlText, 'click', function() {
-	console.log("change dataset");
-	heatmap.setDataSet(testData);
+		isGeneric = !isGeneric;
+		console.log("change dataset for man");	
+		if(!isGeneric){		
+			heatmap.setDataSet(testDataMan);
+			controlText.style.backgroundColor = '#F78181';
+			controlText2.style.backgroundColor = '#fff';
+		}
+		else{
+			heatmap.setDataSet(testData);
+			controlText.style.backgroundColor = '#fff';
+			controlText2.style.backgroundColor = '#fff';
+		}
 	});
 
 	// Setup the click event listeners: filter on man
 	google.maps.event.addDomListener(controlText2, 'click', function() {
-	console.log("change dataset");
-	heatmap.setDataSet(testData);
+		isGeneric = !isGeneric;
+		console.log("change dataset for woman");
+		if(!isGeneric){		
+			heatmap.setDataSet(testDataWoman);
+			controlText2.style.backgroundColor = '#F78181';
+			controlText.style.backgroundColor = '#fff';
+		}
+		else{
+			heatmap.setDataSet(testData);
+			controlText2.style.backgroundColor = '#fff';
+			controlText.style.backgroundColor = '#fff';
+		}
 	});
 
+}		
+
+
+function AgeControl(controlDiv, map) {
+
+	var groups = ["до 18", "18-24", "25-39", "більше 40"];
+	
+	// Set CSS styles for the DIV containing the control
+	// Setting padding to 5 px will offset the control
+	// from the edge of the map
+	controlDiv.style.padding = '5px';
+
+	// Set CSS for the control border
+	var controlUI = document.createElement('div');
+	controlUI.style.backgroundColor = 'white';
+	controlUI.style.borderStyle = 'solid';
+	controlUI.style.borderWidth = '2px';
+	controlUI.style.cursor = 'pointer';
+	controlUI.style.textAlign = 'center';
+	controlUI.title = 'Click to filter';
+	controlDiv.appendChild(controlUI);
+
+	for(var i=0; i< groups.length; i++){
+		// Set CSS for the control interior
+		var controlText = document.createElement('div');
+		controlText.style.fontFamily = 'Arial,sans-serif';
+		controlText.style.fontSize = '12px';
+		controlText.style.paddingLeft = '4px';
+		controlText.style.paddingRight = '4px';
+		controlText.innerHTML = '<b>' + groups[i] + '</b>';
+		controlUI.appendChild(controlText);
+		
+		if(i<groups.length-1){
+			var hr = document.createElement('hr');
+			hr.style.marginTop = '0px';
+			hr.style.marginBottom = '0px';
+			controlUI.appendChild(hr);
+		}
+
+		
+	}
+
+	// Setup the click event listeners: filter on man
+	google.maps.event.addDomListener(controlUI, 'click', function() {
+		console.log("change dataset for age");
+		heatmap.setDataSet(testData);
+	});
+
+
 }				  
+					  
 				  
