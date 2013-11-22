@@ -8,7 +8,8 @@ $(".test-headbar").on("click", function(){
 	console.log("go to age modal");
 	$('#genderModal').modal({
 	  keyboard: false
-	})
+	});
+	drawGenderVisualization();
 });
 
 $(".toExperience").on("click", function(){
