@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
-    <meta name="description" content="">
+    <meta name="description" content="карта ризику потряпляння в рабство">
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -53,8 +53,8 @@
           <ul class="nav navbar-nav">
             <li><a href="#" class="test-headbar">Тест ризику
 			</a></li>
-            <li><a href="/about.html">Про проект</a></li>
-            <li><a href="/contact.html">Зв'язок</a></li>
+            <li><a href="about.html">Про проект</a></li>
+            <li><a href="contact.html">Зв'язок</a></li>
           </ul>
           <form class="navbar-form navbar-right">
 			<a href="#">
@@ -72,281 +72,281 @@
 <div class="jumbotron">
 <div class="container">
 <div style="padding-top: 50px;">
-<h1>Вирушаєш за кордон?</h1>
+	<h1>Вирушаєш за кордон?</h1>
 
-<p>Отримай потрібну інформацію та забезпеч себе від можливості потрапити в рабство. Не стань наступним!</p>
+	<p>Отримай потрібну інформацію та забезпеч себе від можливості потрапити в рабство. Не стань наступним!</p>
 
-<p>
-    <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#genderModal">
-        Оціни рівень свого ризику!
-    </button>
-</p>
+	<p>
+		<button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#genderModal">
+			Оціни рівень свого ризику!
+		</button>
+	</p>
 
-<!-- Gender -->
-<div class="modal fade" id="genderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Ваша стать</h4>
-            </div>
-            <div class="modal-body">
-                <div class="btn-group-horizontal">
-                    <button type="button" class="btn btn-default toAge" data-dismiss="modal">Чоловік
-                    </button>
-                    <button type="button" class="btn btn-default toAge" data-dismiss="modal">Жінка</button>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Gender -->
+	<div class="modal fade" id="genderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Ваша стать</h4>
+				</div>
+				<div class="modal-body">
+					<div class="btn-group-horizontal">
+						<button type="button" class="btn btn-default toAge" data-dismiss="modal">Чоловік
+						</button>
+						<button type="button" class="btn btn-default toAge" data-dismiss="modal">Жінка</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Age -->
-<div class="modal fade" id="ageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Ваш вік</h4>
-            </div>
-            <div class="modal-body">
-                <div class="btn-group-horizontal">
-                    <button type="button" class="btn btn-default toExperience" data-dismiss="modal">до 16
-                        років
-                    </button>
-                    <button type="button" class="btn btn-default toExperience" data-dismiss="modal">18-24
-                    </button>
-                    <button type="button" class="btn btn-default toExperience" data-dismiss="modal">25-39
-                    </button>
-                    <button type="button" class="btn btn-default toExperience" data-dismiss="modal">більше
-                        40 років
-                    </button>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
-                </button>
-                <button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
-                    Рівень мого ризику
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Age -->
+	<div class="modal fade" id="ageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Ваш вік</h4>
+				</div>
+				<div class="modal-body">
+					<div class="btn-group-horizontal">
+						<button type="button" class="btn btn-default toExperience" data-dismiss="modal">до 16
+							років
+						</button>
+						<button type="button" class="btn btn-default toExperience" data-dismiss="modal">18-24
+						</button>
+						<button type="button" class="btn btn-default toExperience" data-dismiss="modal">25-39
+						</button>
+						<button type="button" class="btn btn-default toExperience" data-dismiss="modal">більше
+							40 років
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
+					</button>
+					<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
+						Рівень мого ризику
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Experience -->
-<div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Чи є у вас досвід роботи за кордоном?</h4>
-            </div>
-            <div class="modal-body">
-                <div class="btn-group-horizontal">
-                    <button type="button" class="btn btn-default toCountry" data-dismiss="modal">Так
-                    </button>
-                    <button type="button" class="btn btn-default toCountry" data-dismiss="modal">Ні</button>
-                </div>
+	<!-- Experience -->
+	<div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Чи є у вас досвід роботи за кордоном?</h4>
+				</div>
+				<div class="modal-body">
+					<div class="btn-group-horizontal">
+						<button type="button" class="btn btn-default toCountry" data-dismiss="modal">Так
+						</button>
+						<button type="button" class="btn btn-default toCountry" data-dismiss="modal">Ні</button>
+					</div>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
-                </button>
-                <button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
-                    Рівень мого ризику
-                </button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
+					</button>
+					<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
+						Рівень мого ризику
+					</button>
 
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Country -->
-<div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">До якої краіни плануєте поїхати на роботу?</h4>
-            </div>
-            <div class="modal-body">
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Російська
-                        Федерація
-                    </button>
-                    <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Польща
-                    </button>
-                    <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Чеська
-                        Республіка
-                    </button>
-                    <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">
-                        Туреччина
-                    </button>
-                    <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Італія
-                    </button>
-                    <button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Інші
-                        країни
-                    </button>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
-                </button>
-                <button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
-                    Рівень мого ризику
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Country -->
+	<div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">До якої краіни плануєте поїхати на роботу?</h4>
+				</div>
+				<div class="modal-body">
+					<div class="btn-group-vertical">
+						<button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Російська
+							Федерація
+						</button>
+						<button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Польща
+						</button>
+						<button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Чеська
+							Республіка
+						</button>
+						<button type="button" class="btn btn-default toLanguage" data-dismiss="modal">
+							Туреччина
+						</button>
+						<button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Італія
+						</button>
+						<button type="button" class="btn btn-default toLanguage" data-dismiss="modal">Інші
+							країни
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
+					</button>
+					<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
+						Рівень мого ризику
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Language -->
-<div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Чи володієте іноземними мовами?</h4>
-            </div>
-            <div class="modal-body">
-                <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так (2
-                        і більше)
-                    </button>
-                    <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так
-                        (іноземна мова країни, куди я їду)
-                    </button>
-                    <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так
-                        (іноземна мова, крім країни, куди я їду)
-                    </button>
-                    <button type="button" class="btn btn-default toEducational" data-dismiss="modal">Ні
-                    </button>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
-                </button>
-                <button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
-                    Рівень мого ризику
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Language -->
+	<div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Чи володієте іноземними мовами?</h4>
+				</div>
+				<div class="modal-body">
+					<div class="btn-group-vertical">
+						<button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так (2
+							і більше)
+						</button>
+						<button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так
+							(іноземна мова країни, куди я їду)
+						</button>
+						<button type="button" class="btn btn-default toEducational" data-dismiss="modal">Так
+							(іноземна мова, крім країни, куди я їду)
+						</button>
+						<button type="button" class="btn btn-default toEducational" data-dismiss="modal">Ні
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
+					</button>
+					<button id="toResults" type="button" class="btn btn-warning toResults" data-dismiss="modal">
+						Рівень мого ризику
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Educational -->
-<div class="modal fade" id="educationalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Який рівень вашої освіти?</h4>
-            </div>
-            <div class="modal-body">
-                <button type="button" class="btn btn-default toResults" data-dismiss="modal">Початкова
-                    середня
-                </button>
-                <button type="button" class="btn btn-default toResults" data-dismiss="modal">Середня
-                </button>
-                <button type="button" class="btn btn-default toResults" data-dismiss="modal">Неповна вища
-                </button>
-                <button type="button" class="btn btn-default toResults" data-dismiss="modal">Повна вища
-                </button>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
-                </button>
-                <button type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого
-                    ризику
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Educational -->
+	<div class="modal fade" id="educationalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Який рівень вашої освіти?</h4>
+				</div>
+				<div class="modal-body">
+					<button type="button" class="btn btn-default toResults" data-dismiss="modal">Початкова
+						середня
+					</button>
+					<button type="button" class="btn btn-default toResults" data-dismiss="modal">Середня
+					</button>
+					<button type="button" class="btn btn-default toResults" data-dismiss="modal">Неповна вища
+					</button>
+					<button type="button" class="btn btn-default toResults" data-dismiss="modal">Повна вища
+					</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
+					</button>
+					<button type="button" class="btn btn-warning toResults" data-dismiss="modal">Рівень мого
+						ризику
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Results -->
-<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Ваш рівень ризику - <b>червоний!</b></h4>
-            </div>
-            <div class="modal-body">
-                <img src="img/stop.png" width="270"/>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default buildPath" data-dismiss="modal">Чому?</button>
-                <button type="button" class="btn btn-primary buildPath" data-dismiss="modal">Як це
-                    виправити?
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Results -->
+	<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Ваш рівень ризику - <b>червоний!</b></h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/stop.png" width="270"/>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">Чому?</button>
+					<button type="button" class="btn btn-primary buildPath" data-dismiss="modal">Як це
+						виправити?
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
-<!-- Stolen -->
-<div class="modal fade" id="stolenModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Поки ви думали...</h4>
-            </div>
-            <div class="modal-body">
-            	<object width="400" height="350"
-				classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-				codebase="http://fpdownload.macromedia.com/
-				pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
-				<param name="SRC" value="bookmark.swf">
-				<embed src="robber.swf" width="400" height="350">
-				</embed>
-				</object>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Повернутись до тесту
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
+	<!-- Stolen -->
+	<div class="modal fade" id="stolenModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		 aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Поки ви думали...</h4>
+				</div>
+				<div class="modal-body">
+					<object width="400" height="350"
+					classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+					codebase="http://fpdownload.macromedia.com/
+					pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+					<param name="SRC" value="bookmark.swf">
+					<embed src="robber.swf" width="400" height="350">
+					</embed>
+					</object>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Повернутись до тесту
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 
 </div>
 </div>
@@ -486,7 +486,7 @@
 <div id="legend">
     Карта ризику потрапляння в рабство
 </div>
-</div> <!-- /container -->
+<!--/div--> <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
