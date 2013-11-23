@@ -19,14 +19,27 @@
         ]);
       
         // Create and draw the visualization.
+		/*
         new google.visualization.PieChart(document.getElementById('visualization')).
-            draw(data, {title: "Кiлькiсть постраждалих вiд торгiвлi людьми з 1990 р."});
+            draw(data, {title: "Кiлькiсть постраждалих вiд торгiвлi людьми з 1990 р.", 
+			chartArea: {left:"25%",top:"25%",width:"75%",height:"75%"}});
+		*/
+		new google.visualization.PieChart(document.getElementById('visualization')).
+		draw(data, 
+			{title: "Кількість постраждалих від торгівлі людьми українців", 
+			legend: {position: "right"}, 
+			pieSliceText: "value", 
+			tooltip : {text : "percentage"}, 
+			colors: ["#1E90FF", "#FF1493"],
+			pieHole : 0.4,
+			pieSliceTextStyle : {fontSize: 15, color: "#000"}
+			});
       }
       
       google.setOnLoadCallback(drawVisualization);
     </script>
   </head>
-  <body style="font-family: Arial;border: 0 none;">
-    <div id="visualization" style="width: 600px; height: 400px;"></div>
+  <body style="font-family: Arial;">
+    <div id="visualization" style="width: 600px; height: 400px; border: 1px solid #000;"></div>
   </body>
 </html>

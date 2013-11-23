@@ -86,13 +86,14 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title" id="myModalLabel">Ваша стать</h4>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body">	
 					<div class="btn-group-horizontal">
 						<button type="button" class="btn btn-default toAge" data-dismiss="modal">Чоловік
 						</button>
 						<button type="button" class="btn btn-default toAge" data-dismiss="modal">Жінка</button>
 					</div>
-					<div id="visualization" style="width: 600px; height: 400px;"></div>
+					<hr/>
+					<div id="visualization"></div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default buildPath" data-dismiss="modal">До карти
@@ -363,6 +364,8 @@
     var heatmap;
 
     var buildPath;
+	
+	google.load('visualization', '1', {packages: ['corechart'], 'language': 'ua'});
 
     window.onload = function () {
         var mapCenter = new google.maps.LatLng(50.4501, 30.5234);
@@ -448,9 +451,7 @@
         google.maps.event.addListenerOnce(map, "idle", function () {
             heatmap.setDataSet(testData);
         });
-		
-		// charts API
-		google.load('visualization', '1', {packages: ['corechart']});
+			
     };
 
 </script>

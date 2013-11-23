@@ -1,12 +1,26 @@
 function drawGenderVisualization() {
+	console.log("start 1st chart");
+	
 	// Create and populate the data table.
 	var data = google.visualization.arrayToDataTable([
-	  ['Стать', 'Кiлькiсть людей'],
-	  ['Чоловiки', 42000],
-	  ['Жiнки', 78000]
+	  ['РЎС‚Р°С‚СЊ', 'РљС–Р»СЊРєС–СЃС‚СЊ Р»СЋРґРµР№'],
+	  ['Р§РѕР»РѕРІС–РєРё', 42000],
+	  ['Р–С–РЅРєРё', 78000]
 	]);
+	
+		
+	console.log("data created");
 
 	// Create and draw the visualization.
 	new google.visualization.PieChart(document.getElementById('visualization')).
-	draw(data, {title: "Кiлькiсть постраждалих вiд торгiвлi людьми з 1990 р."});
+		draw(data, 
+			{title: "РљС–Р»СЊРєС–СЃС‚СЊ РїРѕСЃС‚СЂР°Р¶РґР°Р»РёС… РІС–Рґ С‚РѕСЂРіС–РІР»С– Р»СЋРґСЊРјРё СѓРєСЂР°С—РЅС†С–РІ", 
+			legend: {position: "right"}, 
+			pieSliceText: "value", 
+			tooltip : {text : "percentage"}, 
+			colors: ["#1E90FF", "#FF1493"],
+			pieHole : 0.4,
+			pieSliceTextStyle : {fontSize: 15, color: "#000"}
+			});
+	console.log("drawn");	
 }
