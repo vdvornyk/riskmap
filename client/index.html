@@ -386,6 +386,27 @@
         };
         map = new google.maps.Map(document.getElementById("heatmapArea"), myOptions);
 
+		// help function to put generic marker on the map
+		function addMarker(latlng) {
+			var marker = new google.maps.Marker({
+				position: latlng,  
+			});
+			marker.setMap(map);
+			map.panTo(latlng);
+		}
+		
+		// geolocation support from browser
+		if(navigator.geolocation) {
+			console.log("browser supports location sharing");
+			navigator.geolocation.getCurrentPosition(function(){
+				if (google.loader.ClientLocation) {
+					addMarker(new google.maps.LatLng(google.loader.ClientLocation.latitude, google.loader.ClientLocation.longitude));
+				} 
+			}, function(){
+				console.log("failed loading user location");
+			});
+		}
+		
         buildPath = function () {
             // attempt to build risk path to Russia
             var riskPath = new google.maps.Polyline({
