@@ -1,3 +1,6 @@
+// module to support GUI - for test
+// TODO: implement this as separated module
+
 $(".toAge").on("click", function(){
 	console.log("go to age modal");
 	$('#ageModal').modal({
@@ -58,7 +61,7 @@ $(".toResults").on("click", function(){
 
 $(".buildPath").on("click", function(){
 	console.log("Building predefined path for Russia");
-	buildPath();
+	riskmap.map.buildPath();
 });
 
 
