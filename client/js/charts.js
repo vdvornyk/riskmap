@@ -20,7 +20,10 @@ function drawGenderVisualization() {
 			tooltip : {text : "percentage"}, 
 			colors: ["#1E90FF", "#FF1493"],
 			pieHole : 0.4,
-			pieSliceTextStyle : {fontSize: 15, color: "#000"}
+			pieSliceTextStyle : {fontSize: 13, color: "#000"},
+			chartArea:{left: "20%", top: "25%", width:"75%",height:"70%"},
+			heigth: 500,
+			width: 500
 			});
 	console.log("drawn");	
 }
